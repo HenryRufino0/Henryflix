@@ -1,0 +1,43 @@
+# Ambiente virtual
+venv/
+.env
+
+# Arquivos de configuração sensíveis
+*.env
+*.secret
+*.key
+
+# Bytecode do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de log
+*.log
+
+# Banco de dados SQLite local (caso use)
+*.sqlite3
+*.db
+
+# Arquivos temporários e caches
+*.bak
+*.tmp
+*.swp
+*.DS_Store
+*.thumb
+.cache/
+node_modules/
+
+# Arquivos de build/web
+dist/
+build/
+static/*.map
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Pasta de testes temporários
+test-output/
+coverage/
+htmlcov/

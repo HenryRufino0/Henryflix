@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henryflix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #313131;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .tela {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #0084ff;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .subtitulo {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .btn-iniciar {
+      margin-top: 30px;
+      background-color: #0099ff;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .opcoes {
+      margin-top: 40px;
+    }
+
+    .container-canais {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .canal {
+      background-color: #222222;
+      border-radius: 10px;
+      padding: 20px;
+      width: 160px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .canal:hover {
+      transform: scale(1.05);
+    }
+
+    .canal img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .canal p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <section id="inicio" class="tela">
+    <h1 class="logo">Henryflix</h1>
+    <p class="subtitulo">Assista conteúdos de Vídeo Games, Platinas e TCG em um só lugar!</p>
+    <button class="btn-iniciar" onclick="mostrarEscolha()">Iniciar</button>
+
+    <div id="opcoesCanal" class="opcoes hidden">
+      <h2>Quem está assistindo?</h2>
+      <div class="container-canais">
+        <div class="canal" onclick="location.href='tcg.html'">
+          <img src="../static/images/hrtcg.jpeg" alt="Henry TCG">
+          <p>Henry do TCG</p>
+        </div>
+        <div class="canal" onclick="location.href='vlog.html'">
+          <img src="../static/images/hr.jpeg" alt="Henry Rufino">
+          <p>Henry Rufino</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function mostrarEscolha() {
+      document.getElementById("opcoesCanal").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
